@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app)  # Allow frontend requests from any origin
 
 # Load data once at startup
-df = pd.read_csv('C:/Users/rajes/Downloads/geobias-app/backend/geobias_matrix.csv')
+df = pd.read_csv('data/geobias_matrix.csv')
 
 @app.route('/')
 def home():
