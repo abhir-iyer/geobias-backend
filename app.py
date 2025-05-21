@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
-
-
 from flask import Flask, jsonify
 import pandas as pd
 from flask_cors import CORS
@@ -43,14 +37,3 @@ def get_filtered(source, target):
     if target != "All":
         filtered = filtered[filtered["target_country"] == target]
     return jsonify(filtered.to_dict(orient='records'))
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-# In[ ]:
-
-
-
-
